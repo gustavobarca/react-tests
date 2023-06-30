@@ -11,6 +11,7 @@ describe("Counter", () => {
     expect(counter).toBeInTheDocument();
     expect(counter.textContent).toBe("0");
   });
+
   it("should be 1 after first click", async () => {
     render(<Counter />);
 
@@ -28,6 +29,7 @@ describe("Counter", () => {
     expect(counter).toBeInTheDocument();
     expect(counter.textContent).toBe("1");
   });
+  
   it("should be 2 after second click", async () => {
     render(<Counter />);
 
