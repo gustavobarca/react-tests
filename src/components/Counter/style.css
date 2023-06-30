@@ -1,0 +1,9 @@
+.counter-container {
+  flex-direction: column;
+  display:flex;
+  width: 100px;
+}
+
+.counter-container span span {
+  font-weight: 600;
+}

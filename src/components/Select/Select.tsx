@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './style.css';
 
 export interface Option {
   value: string;
@@ -14,22 +15,21 @@ export function Select({ options }: Props) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div data-testid="select-container" onClick={() => setOpen(true)}>
-      <span data-testid="select-label">
+    <div className="select-container" data-testid="select-container" onClick={() => setOpen(prev => !prev)}>
+      <button type="button" className="select-label" data-testid="select-label">
         {selected ? selected.value : 'Selecione uma opcão'}
-      </span>
+      </button>
       {open && (
-        <div data-testid="select-options">
+        <ul className="select-options" data-testid="select-options">
           {options.map(option => (
-            <button
+            <li
               key={option.key}
-              type="button"
               onClick={() => setSelected(option)}
             >
               {option.value}
-            </button>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );

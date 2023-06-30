@@ -5,7 +5,7 @@ import App from "./App";
 describe("App", () => {
   it("should render content", async () => {
     render(<App />);
-    const element = await screen.findByText("App contents goes here");
+    const element = await screen.findByText("🧪 Testes em React JS");
     expect(element).toBeInTheDocument();
   });
 });
